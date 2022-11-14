@@ -87,9 +87,35 @@
                             <div class="top__right">
                             <h1 title-overflow="" data-scroll="" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-speed="-7">
                                 <p class="hero__paragraph">
-                                <a href="https://ocnwaokoro.github.io/" target="_blank">
-                               <img src="/assets/images/fury.gif" height="300" width="300" />
-                               </a>
+                                <audio id="audio_play">
+                                    <source src="/assets/sounds/epic.mp3" type="audio/mpeg" />
+                                </audio>
+                                <!--                              
+                               
+                                
+                                <img src="http://bit.ly/1mq0tIt" onClick="document.getElementById('audio_play').pause(); return false;" />
+                                
+                                <img src="/assets/images/fury.gif" height="300" width="300" onmouseenter="document.getElementById('audio_play').play(); return false;" onmouseleave="document.getElementById('audio_play').pause(); return false;" />    
+
+                              -->
+                               <a href="https://ocnwaokoro.github.io/" target="_blank" >
+                               <img src="/assets/images/fury.gif" height="300" width="300" onmouseenter="play()" onmouseleave="play()" />    
+
+                               <!--
+                               <img src="/assets/images/fury.gif" height="300" width="300" onlick="play()"/>  
+                                --> 
+                                     <script type="text/javascript">
+                                        function play() {
+                                            var audio = document.getElementById('audio_play');
+                                            if (audio.paused) {
+                                                audio.play();
+                                            }else{
+                                                audio.pause();
+                                                audio.currentTime = 0
+                                            }
+                                        }
+                                      </script> 
+                                </a>
                                 </p>
                             </h1>
                                 
